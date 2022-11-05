@@ -4,7 +4,7 @@
 #include <memory>
 
 template <class T>
-class Transaction
+class Transaction  // комментарий
 {
 	T data;
 	std::shared_ptr<Transaction> previous;

@@ -15,36 +15,31 @@ class Transaction  // комментарий
 		this->previous = NULL;
 		this->next = NULL;
 	}
-	void Update(T object)
+	Transaction* Update(T object)
 	{
-		this->previous = current;
-		this->current.reset(new T(object));
+		Transaction* trans = new Transaction(object);
+		if (this->next != NULL)
+		{
+			this->next.~shared_ptr();
+		}
+		trans->previous = this;
+		this->next = trans;
+		trans->next = NULL;
+		return trans;
 	}
-	std::shared_ptr<T> Get_previous_state()
+	std::shared_ptr<Transaction> go_previous_state()
 	{
-		return this->previous;
+		if(this->previous != NULL)
+			return this->previous;
 	}
-	std::shared_ptr<T> Get_current_state()
+	std::shared_ptr<Transaction> go_next_state()
 	{
-		return this->current;
+		if (this->next != NULL)
+			return this->next;
 	}
-	void Go_back()
+	T get_data()
 	{
-		this->current.~shared_ptr();
-		this->current = this->previous;
-	}
-	T* Return_current()
-	{
-		return current.get();
-	}
-	T* Return_previous()
-	{
-		return previous.get();
-	}
-	~Transaction()
-	{
-		this->current.~shared_ptr();
-		this->previous.~shared_ptr();
+		return this->data;
 	}
 };
 

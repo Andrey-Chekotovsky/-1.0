@@ -3,5 +3,6 @@
 class Admin :
     public Employee
 {
+
 };
 

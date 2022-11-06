@@ -4,11 +4,48 @@
 #include "FullName.h"
 #include "Exeptions.h"
 
-class Book   //main class
+class Book   
 {
+private:
 	FullName Author_name;
 	char book_name[40];
 	char description[500];
 	float price;
+public:
+	Book();
+	Book(Book& other);
+	float get_price()
+	{
+		return this->price;
+	}
+	void set_price(float price)
+	{
+		this->price = price;
+	}
+	FullName get_Author_name()
+	{
+		return this->Author_name;
+	}
+	void set_Author_name(FullName author_name)
+	{
+		this->Author_name = author_name;
+	}
+	char* get_description()
+	{
+		return this->description;
+	}
+	void set_description(char* description)
+	{
+		strcpy_s(this->description, description);
+	}
+	char* get_book_name()
+	{
+		return this->book_name;
+	}
+	void set_book_name(char* book_name)
+	{
+		strcpy_s(this->book_name, book_name);
+	}
+	void operator =(Book& other);
 };
 

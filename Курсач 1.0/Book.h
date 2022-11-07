@@ -10,10 +10,19 @@ private:
 	FullName Author_name;
 	char book_name[40];
 	char description[500];
+	int num_of_copies;
 	float price;
 public:
 	Book();
 	Book(Book& other);
+	void set_num_of_copies(int num)
+	{
+		this->num_of_copies = num;
+	}
+	int get_num_of_copies()
+	{
+		return this->num_of_copies;
+	}
 	float get_price()
 	{
 		return this->price;

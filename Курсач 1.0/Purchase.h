@@ -10,7 +10,7 @@ class Purchase
 {
 private:
 	Date date;
-	FullName costomer;
+	FullName customer;
 	int num;
 	Book order[10];
 public:
@@ -26,11 +26,15 @@ public:
 	}
 	FullName get_Author_name()
 	{
-		return this->costomer;
+		return this->customer;
 	}
 	void set_Author_name(FullName costomer)
 	{
-		this->costomer = costomer;
+		this->customer = costomer;
+	}
+	int get_num()
+	{
+		return this->num;
 	}
 	void add(Book book);
 	void del(int num);

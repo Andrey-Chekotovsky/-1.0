@@ -8,7 +8,7 @@ Purchase::Purchase()
 Purchase::Purchase(Purchase& other)
 {
 	this->date = other.date;
-	this->costomer = other.costomer;
+	this->customer = other.customer;
 	this->num = other.num;
 	for (int i = 0; i < num; i++)
 	{
@@ -23,7 +23,7 @@ void Purchase::add(Book book)
 void Purchase::del(int num)
 {
 	this->num--;
-	for (int i = num - 1; i < this->num; i++)
+	for (int i = num; i < this->num; i++)
 	{
 		this->order[i] = this->order[i + 1];
 	}
@@ -31,7 +31,7 @@ void Purchase::del(int num)
 void Purchase::operator =(Purchase& other)
 {
 	this->date = other.date;
-	this->costomer = other.costomer;
+	this->customer = other.customer;
 	this->num = other.num;
 	for (int i = 0; i < num; i++)
 	{

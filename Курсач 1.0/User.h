@@ -3,6 +3,7 @@
 #include <string>
 #include "FullName.h"
 #include "Exeptions.h"
+#include "Role.h"
 
 class User
 {
@@ -10,8 +11,7 @@ protected:
 	FullName full_name;
 	char login[30];
 	char pasword[30];
-	char UserID[40];
-	void generate_UserID();
+	Role role;
 public:
 	
 	void set_full_name(FullName full_name)
@@ -33,18 +33,18 @@ public:
 	void set_pasword(char* pasword)
 	{
 		strcpy_s(this->pasword, pasword);
-	}
+	} 
 	char* get_pasword()
 	{
 		return this->pasword;
 	}
-	void set_UserID(char* UserID)
+	Role get_role()
 	{
-		strcpy_s(this->UserID, UserID);
+		return this->role;
 	}
-	char* get_UserID()
+	void set_role(Role role)
 	{
-		return this->UserID;
+		this->role = role;
 	}
 };
 

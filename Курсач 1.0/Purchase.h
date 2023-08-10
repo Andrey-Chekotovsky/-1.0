@@ -5,39 +5,29 @@
 #include "Exeptions.h"
 #include "Date.h"
 #include "Book.h"
+#include<vector>
 
 class Purchase
 {
 private:
-	Date date;
-	FullName customer;
+	int customer_ID;
+	float price;
 	int num;
-	Book order[10];
+	int order[10];
+	int books_in_order[10];
+	Date date;
 public:
 	Purchase();
-	Purchase(Purchase& other);
-	Date get_date()
-	{
-		return this->date;
-	}
-	void set_date(Date date)
-	{
-		this->date = date;
-	}
-	FullName get_Author_name()
-	{
-		return this->customer;
-	}
-	void set_Author_name(FullName costomer)
-	{
-		this->customer = costomer;
-	}
-	int get_num()
-	{
-		return this->num;
-	}
-	void add(Book book);
-	void del(int num);
-	void operator =(Purchase& other);
+	Purchase(Purchase const& other);
+	int get_costomerID();
+	void set_costomerID(int costomer);
+	int get_num();
+	int get_number_of_books();
+	float get_price();
+	int get_book_ID(int num_of_book);
+	void add(Book& book, int num_books);
+	void return_all_books(std::vector<Book>& mas);
+	int return_books(Book book);
+	void operator =(Purchase const& other);
 };
 

@@ -20,7 +20,7 @@ public:
 	bool operator < (const Date& other);
 	bool operator > (const Date& other);
 
-	int SetDate();
-	std::string GetDate();
+	int setDate(int day, int month, int year);
+	std::string get_string();
 };
 

@@ -122,10 +122,11 @@ bool Date::operator > (const Date& other)
 	return false;
 }
 
-int Date::SetDate()
+int Date::setDate(int day, int month, int year)
 {
-	std::cout << "через пробел введите число, мес€ц и год:\n";
-	std::cin >> this->day >> this->month >> this->year;
+	this->day = day;
+	this->month = month;
+	this->year = year;
 	std::cin.clear();
 	DateTimeExeption excp;
 	if (this->month > 12 || this->day > Define_Month(this->month, this->year))
@@ -134,7 +135,7 @@ int Date::SetDate()
 		throw excp;
 	return 0;
 }
-std::string Date::GetDate()
+std::string Date::get_string()
 {
 	std::string date = "";
 	if (this->day < 10)

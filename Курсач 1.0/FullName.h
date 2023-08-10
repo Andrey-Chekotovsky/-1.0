@@ -5,15 +5,19 @@
 class FullName
 {
 private:
-	char Name[30], Surname[30], Patronymic[30];
+	char name[30], surname[30];
 public:
 	FullName();
-	FullName(char name[30], char surname[30], char patronymic[30]);
-	std::string GetFIO();
+	FullName(char name[30], char surname[30]);
+	void set_surname(char* surname);
+	char* get_surname();
+	void set_name(char* name);
+	char* get_name();
+	std::string get_string();
 	void SetFIO();
-	bool operator <(FullName& other);
-	bool operator >(FullName& other);
+	bool operator <(FullName const& other);
+	bool operator >(FullName const& other);
 	void operator =(const FullName& other);
-	bool operator ==(FullName& other);
+	bool operator ==(FullName const& other);
 };
 

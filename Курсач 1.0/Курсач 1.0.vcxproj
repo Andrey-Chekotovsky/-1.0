@@ -140,34 +140,34 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
-    <ClCompile Include="BookControler.cpp" />
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="Exeptions.cpp" />
     <ClCompile Include="FullName.cpp" />
-    <ClCompile Include="functions.cpp" />
-    <ClCompile Include="Meny.cpp" />
-    <ClCompile Include="PurchaseControler.cpp" />
+    <ClCompile Include="Keys.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MenuButNot.cpp" />
     <ClCompile Include="Role.cpp" />
     <ClCompile Include="Purchase.cpp" />
+    <ClCompile Include="functions.cpp" />
+    <ClCompile Include="Task.cpp" />
     <ClCompile Include="Transaction.cpp" />
     <ClCompile Include="User.cpp" />
-    <ClCompile Include="UserControler.cpp" />
     <ClCompile Include="Курсач 1.0.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h" />
-    <ClInclude Include="BookControler.h" />
     <ClInclude Include="Date.h" />
     <ClInclude Include="Exeptions.h" />
     <ClInclude Include="FullName.h" />
     <ClInclude Include="functions.h" />
-    <ClInclude Include="Meny.h" />
-    <ClInclude Include="PurchaseControler.h" />
+    <ClInclude Include="Keys.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="MenuButNot.h" />
     <ClInclude Include="Role.h" />
     <ClInclude Include="Purchase.h" />
+    <ClInclude Include="Task.h" />
     <ClInclude Include="Transaction.h" />
     <ClInclude Include="User.h" />
-    <ClInclude Include="UserControler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
